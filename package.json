@@ -1,0 +1,28 @@
+{
+  "name": "async-query",
+  "version": "1.0.0",
+  "description": "Asynchronous versions of querySelector() and querySelectorAll()",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/async-query.git"
+  },
+  "author": "Robot-Inventor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/async-query/issues"
+  },
+  "homepage": "https://github.com/Robot-Inventor/async-query#readme",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

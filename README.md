@@ -2,7 +2,7 @@
 
 Asynchronous versions of ``querySelector()`` and ``querySelectorAll()``.
 
-This is useful when you want to retrieve objects based on attributes that change dynamically and you cannot control when the attributes change. For example, this can be used for browser extensions.
+This is useful when you want to retrieve elements based on attributes that change dynamically and you cannot control when the attributes change. For example, this can be used for browser extensions.
 
 ## Installation
 
@@ -13,7 +13,7 @@ npm install async-query
 ## Usage
 
 ```js
-import { querySelector, querySelectorAll } from "async-query";
+import { asyncQuerySelector, asyncQuerySelectorAll } from "async-query";
 
 const element = await asyncQuerySelector("#my-element");
 const elements = await asyncQuerySelectorAll(".my-elements");

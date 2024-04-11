@@ -83,9 +83,11 @@ type AsyncQuerySelectorAll = {
         timeoutMs?: number
     ): Promise<NodeListOf<HTMLElementDeprecatedTagNameMap[K]>>;
 
-    <E extends Element = Element>(selectors: string, parentElement?: Element | Document, timeoutMs?: number): Promise<
-        NodeListOf<E>
-    >;
+    <E extends Element = Element>(
+        selectors: string,
+        parentElement?: Element | Document,
+        timeoutMs?: number
+    ): Promise<NodeListOf<E>>;
 };
 
 /*!

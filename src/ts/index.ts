@@ -1,3 +1,5 @@
+/* eslint-disable multiline-comment-style */
+
 /**
  * Note: AsyncQuerySelector type and AsyncQuerySelectorAll type are based on TypeScript's lib.dom.d.ts.
  *
@@ -23,6 +25,8 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
+
+/* eslint-enable multiline-comment-style */
 
 type AsyncQuerySelector = {
     <K extends keyof HTMLElementTagNameMap>(
@@ -90,10 +94,11 @@ type AsyncQuerySelectorAll = {
     ): Promise<NodeListOf<E>>;
 };
 
+// eslint-disable-next-line multiline-comment-style
 /*!
  * The following code is provided under the MIT License.
  */
-
+// eslint-disable-next-line jsdoc/require-jsdoc
 const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof document.querySelectorAll>(
     selectorFunction: () => ReturnType<E>,
     timeoutMs: number
@@ -146,6 +151,7 @@ const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof
 const asyncQuerySelector: AsyncQuerySelector = async (
     selectors: string,
     parentElement: Element | Document = document,
+    // eslint-disable-next-line no-magic-numbers
     timeoutMs: number = 500
 ): Promise<ReturnType<typeof document.querySelector>> => {
     const result = await asyncQuerySelectorBase<typeof document.querySelector>(
@@ -165,9 +171,11 @@ const asyncQuerySelector: AsyncQuerySelector = async (
 const asyncQuerySelectorAll: AsyncQuerySelectorAll = async (
     selectors: string,
     parentElement: Element | Document = document,
+    // eslint-disable-next-line no-magic-numbers
     timeoutMs: number = 500
 ): Promise<ReturnType<typeof document.querySelectorAll>> => {
     const result =
+        // eslint-disable-next-line no-extra-parens
         (await asyncQuerySelectorBase<typeof document.querySelectorAll>(
             () => parentElement.querySelectorAll(selectors),
             timeoutMs

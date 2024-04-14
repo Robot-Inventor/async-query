@@ -1,6 +1,6 @@
 {
   "name": "async-query",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Asynchronous versions of querySelector() and querySelectorAll()",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

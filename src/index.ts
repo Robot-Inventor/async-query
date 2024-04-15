@@ -105,10 +105,7 @@ const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof
 ): Promise<ReturnType<E> | null> => {
     const promise = new Promise<ReturnType<E> | null>((resolve) => {
         const initialResult = selectorFunction();
-        if (
-            (initialResult instanceof Element && initialResult) ||
-            (initialResult instanceof NodeList && initialResult.length)
-        ) {
+        if (initialResult instanceof Element || (initialResult instanceof NodeList && initialResult.length)) {
             resolve(initialResult);
             return;
         }
@@ -117,7 +114,7 @@ const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof
 
         const observer = new MutationObserver(() => {
             const element = selectorFunction();
-            if (!element) return;
+            if (!(element instanceof Element) && !(element instanceof NodeList && element.length)) return;
 
             observer.disconnect();
             if (timeout) {

@@ -2,6 +2,9 @@
   "name": "async-query",
   "version": "2.0.0",
   "description": "Asynchronous versions of querySelector() and querySelectorAll()",
+  "publishConfig": {
+    "provenance": true
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +12,9 @@
     "version": "npm run build && git add .",
     "format": "prettier --write ./src/**/*.ts",
     "format:check": "prettier --check ./src/**/*.ts",
-    "lint": "eslint ./src/**/*.ts"
+    "lint": "eslint ./src/**/*.ts",
+    "changeset-version": "changeset version && npm run version",
+    "changeset-publish": "npm run build && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,8 @@
     "dist"
   ],
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
     "@robot-inventor/eslint-config": "^0.1.1",
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",

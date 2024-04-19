@@ -39,6 +39,33 @@ asyncQuerySelectorAll(selectors: string, parentElement: Element | Document, time
 - ``parentElement``: The parent element to search in.
 - ``timeoutMs``: The timeout in milliseconds. If the timeout is reached, the promise will resolve to an empty ``NodeList``.
 
+## Development
+
+```bash
+npm install
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Format and Lint
+
+```bash
+npm run format
+npm run lint
+```
+
+### Pull Requests
+
+This repository uses [Changesets](https://github.com/changesets/changesets) to manage versioning and releases. When creating a pull request, please run the Changesets CLI and commit the changeset file.
+
+```bash
+npx changeset
+```
+
 ## License
 
 This project is licensed under the MIT License.
@@ -47,7 +74,10 @@ This project is licensed under the MIT License.
 
 This project uses TypeScript's code. TypeScript is licensed under the Apache License 2.0.
 
-```
+<details>
+<summary>Open license text</summary>
+
+```markdown
 Apache License
 
 Version 2.0, January 2004
@@ -104,3 +134,5 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 
 END OF TERMS AND CONDITIONS
 ```
+
+</details>

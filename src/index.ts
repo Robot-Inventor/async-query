@@ -110,7 +110,7 @@ const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof
             return;
         }
 
-        let timeout: number | null = null;
+        let timeout: ReturnType<typeof setTimeout> | null = null;
 
         const observer = new MutationObserver(() => {
             const element = selectorFunction();

@@ -1,5 +1,3 @@
-/* eslint-disable multiline-comment-style */
-
 /**
  * Note: AsyncQuerySelector type and AsyncQuerySelectorAll type are based on TypeScript's lib.dom.d.ts.
  *
@@ -25,8 +23,6 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-/* eslint-enable multiline-comment-style */
 
 type AsyncQuerySelector = {
     <K extends keyof HTMLElementTagNameMap>(
@@ -94,7 +90,6 @@ type AsyncQuerySelectorAll = {
     ): Promise<NodeListOf<E>>;
 };
 
-// eslint-disable-next-line multiline-comment-style
 /*!
  * The following code is provided under the MIT License.
  */

@@ -1,5 +1,11 @@
 # async-query
 
+## 2.0.3
+
+### Patch Changes
+
+-   [#47](https://github.com/Robot-Inventor/async-query/pull/47) [`36931fd`](https://github.com/Robot-Inventor/async-query/commit/36931fd49b782bd84981acad195594c35d3a9b31) Thanks [@dependabot](https://github.com/apps/dependabot)! - build(deps-dev): bump braces from 3.0.2 to 3.0.3
+
 ## 2.0.2
 
 ### Patch Changes

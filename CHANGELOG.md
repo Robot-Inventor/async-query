@@ -1,5 +1,11 @@
 # async-query
 
+## 2.0.4
+
+### Patch Changes
+
+-   [#77](https://github.com/Robot-Inventor/async-query/pull/77) [`37dc955`](https://github.com/Robot-Inventor/async-query/commit/37dc9554b45caeb8914682549299410c80fc5e00) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix some ESLint errors
+
 ## 2.0.3
 
 ### Patch Changes

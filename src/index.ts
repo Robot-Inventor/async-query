@@ -24,7 +24,7 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
 
-type AsyncQuerySelector = {
+interface AsyncQuerySelector {
     <K extends keyof HTMLElementTagNameMap>(
         selectors: K,
         parentElement?: Element | Document,
@@ -55,9 +55,9 @@ type AsyncQuerySelector = {
         parentElement?: Element | Document,
         timeoutMs?: number
     ): Promise<E | null>;
-};
+}
 
-type AsyncQuerySelectorAll = {
+interface AsyncQuerySelectorAll {
     <K extends keyof HTMLElementTagNameMap>(
         selectors: K,
         parentElement?: Element | Document,
@@ -88,7 +88,7 @@ type AsyncQuerySelectorAll = {
         parentElement?: Element | Document,
         timeoutMs?: number
     ): Promise<NodeListOf<E>>;
-};
+}
 
 /*!
  * The following code is provided under the MIT License.
@@ -144,7 +144,7 @@ const asyncQuerySelector: AsyncQuerySelector = async (
     selectors: string,
     parentElement: Element | Document = document,
     // eslint-disable-next-line no-magic-numbers
-    timeoutMs: number = 500
+    timeoutMs = 500
 ): Promise<ReturnType<typeof document.querySelector>> => {
     const result = await asyncQuerySelectorBase<typeof document.querySelector>(
         () => parentElement.querySelector(selectors),
@@ -164,7 +164,7 @@ const asyncQuerySelectorAll: AsyncQuerySelectorAll = async (
     selectors: string,
     parentElement: Element | Document = document,
     // eslint-disable-next-line no-magic-numbers
-    timeoutMs: number = 500
+    timeoutMs = 500
 ): Promise<ReturnType<typeof document.querySelectorAll>> => {
     const result =
         // eslint-disable-next-line no-extra-parens

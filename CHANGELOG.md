@@ -1,5 +1,11 @@
 # async-query
 
+## 2.0.5
+
+### Patch Changes
+
+-   [#84](https://github.com/Robot-Inventor/async-query/pull/84) [`ae27c1c`](https://github.com/Robot-Inventor/async-query/commit/ae27c1c01c3910a1dacc02399e1f09cb83091acd) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - style: remove unused `eslint-disable-next-line` comment
+
 ## 2.0.4
 
 ### Patch Changes

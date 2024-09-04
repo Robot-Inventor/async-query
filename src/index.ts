@@ -167,7 +167,6 @@ const asyncQuerySelectorAll: AsyncQuerySelectorAll = async (
     timeoutMs = 500
 ): Promise<ReturnType<typeof document.querySelectorAll>> => {
     const result =
-        // eslint-disable-next-line no-extra-parens
         (await asyncQuerySelectorBase<typeof document.querySelectorAll>(
             () => parentElement.querySelectorAll(selectors),
             timeoutMs

@@ -1,5 +1,13 @@
 # async-query
 
+## 2.0.6
+
+### Patch Changes
+
+-   [#100](https://github.com/Robot-Inventor/async-query/pull/100) [`a538bf5`](https://github.com/Robot-Inventor/async-query/commit/a538bf53251d65ccf246a719a1c67969570da0c5) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
+-   [#101](https://github.com/Robot-Inventor/async-query/pull/101) [`e22ca3b`](https://github.com/Robot-Inventor/async-query/commit/e22ca3b0de53dcfedaa82654a1df7746c9e2d7db) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: add GitHub Actions workflow to verify build success
+
 ## 2.0.5
 
 ### Patch Changes

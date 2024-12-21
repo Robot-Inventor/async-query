@@ -1,6 +1,6 @@
 {
   "name": "async-query",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Asynchronous versions of querySelector() and querySelectorAll()",
   "publishConfig": {
     "provenance": true

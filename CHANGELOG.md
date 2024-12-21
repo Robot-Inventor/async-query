@@ -1,5 +1,11 @@
 # async-query
 
+## 2.0.8
+
+### Patch Changes
+
+- [#115](https://github.com/Robot-Inventor/async-query/pull/115) [`6890741`](https://github.com/Robot-Inventor/async-query/commit/68907418c6e80e53e35c7db631e747a2b93642e7) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: remove deprecated functions and improve type annotations
+
 ## 2.0.7
 
 ### Patch Changes

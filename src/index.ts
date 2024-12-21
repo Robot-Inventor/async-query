@@ -94,7 +94,7 @@ interface AsyncQuerySelectorAll {
  * The following code is provided under the MIT License.
  */
 // eslint-disable-next-line jsdoc/require-jsdoc
-const asyncQuerySelectorBase = <E extends typeof document.querySelector | typeof document.querySelectorAll>(
+const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["querySelectorAll"]>(
     selectorFunction: () => ReturnType<E>,
     timeoutMs: number
 ): Promise<ReturnType<E> | null> => {
@@ -145,8 +145,8 @@ const asyncQuerySelector: AsyncQuerySelector = async (
     parentElement: Element | Document = document,
     // eslint-disable-next-line no-magic-numbers
     timeoutMs = 500
-): Promise<ReturnType<typeof document.querySelector>> => {
-    const result = await asyncQuerySelectorBase<typeof document.querySelector>(
+): Promise<ReturnType<Document["querySelector"]>> => {
+    const result = await asyncQuerySelectorBase<Document["querySelector"]>(
         () => parentElement.querySelector(selectors),
         timeoutMs
     );
@@ -165,9 +165,9 @@ const asyncQuerySelectorAll: AsyncQuerySelectorAll = async (
     parentElement: Element | Document = document,
     // eslint-disable-next-line no-magic-numbers
     timeoutMs = 500
-): Promise<ReturnType<typeof document.querySelectorAll>> => {
+): Promise<ReturnType<Document["querySelectorAll"]>> => {
     const result =
-        (await asyncQuerySelectorBase<typeof document.querySelectorAll>(
+        (await asyncQuerySelectorBase<Document["querySelectorAll"]>(
             () => parentElement.querySelectorAll(selectors),
             timeoutMs
         )) ?? (document.createDocumentFragment().childNodes as NodeListOf<Element>);

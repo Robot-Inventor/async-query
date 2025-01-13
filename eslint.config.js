@@ -1,3 +1,3 @@
-const { eslintConfig } = require("@robot-inventor/eslint-config");
+import { eslintConfig } from "@robot-inventor/eslint-config";
 
-module.exports = eslintConfig;
+export default eslintConfig;

@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.0
+
+### Major Changes
+
+- [#122](https://github.com/Robot-Inventor/async-query/pull/122) [`f27e754`](https://github.com/Robot-Inventor/async-query/commit/f27e754af61c25ec361d5aa5042c10f016620909) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: add the `type` field to `package.json`
+
 ## 2.0.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.1
+
+### Patch Changes
+
+- [#162](https://github.com/Robot-Inventor/async-query/pull/162) [`09f7d68`](https://github.com/Robot-Inventor/async-query/commit/09f7d6850ce9ad89ad2cf7e85b3bee60d4bd5d90) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: migrate from npm token to trusted publishing
+
 ## 3.0.0
 
 ### Major Changes

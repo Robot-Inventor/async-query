@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.2
+
+### Patch Changes
+
+- [#198](https://github.com/Robot-Inventor/async-query/pull/198) [`933d437`](https://github.com/Robot-Inventor/async-query/commit/933d437a00a061587571e06a3041e7602d15d249) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): bump flatted from 3.3.1 to 3.4.2
+
 ## 3.0.1
 
 ### Patch Changes

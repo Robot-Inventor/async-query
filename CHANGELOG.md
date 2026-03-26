@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.3
+
+### Patch Changes
+
+- [#202](https://github.com/Robot-Inventor/async-query/pull/202) [`4c7636e`](https://github.com/Robot-Inventor/async-query/commit/4c7636e4228e08612948c54b00326468701433af) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps): bump picomatch
+
 ## 3.0.2
 
 ### Patch Changes

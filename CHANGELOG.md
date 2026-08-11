@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.4
+
+### Patch Changes
+
+- [#225](https://github.com/Robot-Inventor/async-query/pull/225) [`0df8df3`](https://github.com/Robot-Inventor/async-query/commit/0df8df393f3cb359b94d96ec1ce79e8c95225482) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
 ## 3.0.3
 
 ### Patch Changes

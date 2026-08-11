@@ -14,8 +14,8 @@
     "format": "prettier --write ./src/**/*.ts",
     "format:check": "prettier --check ./src/**/*.ts",
     "lint": "eslint ./src/**/*.ts",
-    "changeset-version": "changeset version && npm run version",
-    "changeset-publish": "npm run build && changeset publish"
+    "ci:version": "changeset version && npm run version",
+    "ci:publish": "npm run build && changeset publish"
   },
   "repository": {
     "type": "git",

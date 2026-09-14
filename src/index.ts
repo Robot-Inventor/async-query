@@ -50,6 +50,7 @@ interface AsyncQuerySelector {
         timeoutMs?: number
     ): Promise<HTMLElementDeprecatedTagNameMap[K] | null>;
 
+    // oxlint-disable-next-line id-length
     <E extends Element = Element>(
         selectors: string,
         parentElement?: Element | Document,
@@ -83,6 +84,7 @@ interface AsyncQuerySelectorAll {
         timeoutMs?: number
     ): Promise<NodeListOf<HTMLElementDeprecatedTagNameMap[K]>>;
 
+    // oxlint-disable-next-line id-length
     <E extends Element = Element>(
         selectors: string,
         parentElement?: Element | Document,
@@ -93,7 +95,7 @@ interface AsyncQuerySelectorAll {
 /*!
  * The following code is provided under the MIT License.
  */
-// eslint-disable-next-line jsdoc/require-jsdoc
+// oxlint-disable-next-line id-length jsdoc-js/require-jsdoc
 const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["querySelectorAll"]>(
     selectorFunction: () => ReturnType<E>,
     timeoutMs: number
@@ -143,7 +145,7 @@ const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["
 const asyncQuerySelector: AsyncQuerySelector = async (
     selectors: string,
     parentElement: Element | Document = document,
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     timeoutMs = 500
 ): Promise<ReturnType<Document["querySelector"]>> => {
     const result = await asyncQuerySelectorBase<Document["querySelector"]>(
@@ -163,7 +165,7 @@ const asyncQuerySelector: AsyncQuerySelector = async (
 const asyncQuerySelectorAll: AsyncQuerySelectorAll = async (
     selectors: string,
     parentElement: Element | Document = document,
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     timeoutMs = 500
 ): Promise<ReturnType<Document["querySelectorAll"]>> => {
     const result =

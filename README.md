@@ -1,6 +1,6 @@
 # async-query
 
-Asynchronous versions of ``querySelector()`` and ``querySelectorAll()``.
+Asynchronous versions of `querySelector()` and `querySelectorAll()`.
 
 This is useful when you want to retrieve elements based on attributes that change dynamically and you cannot control when the attributes change. For example, this can be used for browser extensions.
 
@@ -25,9 +25,9 @@ const elements = await asyncQuerySelectorAll(".my-elements");
 asyncQuerySelector(selectors: string, parentElement: Element | Document, timeoutMs: number): Promise<Element | null>
 ```
 
-- ``selectors``: The CSS selector to use.
-- ``parentElement``: The parent element to search in.
-- ``timeoutMs``: The timeout in milliseconds. If the timeout is reached, the promise will resolve to ``null``.
+- `selectors`: The CSS selector to use.
+- `parentElement`: The parent element to search in.
+- `timeoutMs`: The timeout in milliseconds. If the timeout is reached, the promise will resolve to `null`.
 
 ### asyncQuerySelectorAll()
 
@@ -35,9 +35,9 @@ asyncQuerySelector(selectors: string, parentElement: Element | Document, timeout
 asyncQuerySelectorAll(selectors: string, parentElement: Element | Document, timeoutMs: number): Promise<NodeListOf<Element>>
 ```
 
-- ``selectors``: The CSS selector to use.
-- ``parentElement``: The parent element to search in.
-- ``timeoutMs``: The timeout in milliseconds. If the timeout is reached, the promise will resolve to an empty ``NodeList``.
+- `selectors`: The CSS selector to use.
+- `parentElement`: The parent element to search in.
+- `timeoutMs`: The timeout in milliseconds. If the timeout is reached, the promise will resolve to an empty `NodeList`.
 
 ## Development
 

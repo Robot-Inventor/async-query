@@ -2,41 +2,41 @@
   "name": "async-query",
   "version": "3.0.5",
   "description": "Asynchronous versions of querySelector() and querySelectorAll()",
-  "publishConfig": {
-    "provenance": true
+  "homepage": "https://github.com/Robot-Inventor/async-query#readme",
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/async-query/issues"
   },
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "version": "npm run build && git add .",
-    "format": "prettier --write ./src/**/*.ts",
-    "format:check": "prettier --check ./src/**/*.ts",
-    "lint": "oxlint ./src",
-    "ci:version": "changeset version && npm run version",
-    "ci:publish": "npm run build && changeset publish"
-  },
+  "license": "MIT",
+  "author": "Robot-Inventor",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Robot-Inventor/async-query.git"
   },
-  "author": "Robot-Inventor",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Robot-Inventor/async-query/issues"
-  },
-  "homepage": "https://github.com/Robot-Inventor/async-query#readme",
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc",
+    "version": "npm run build && git add .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint ./src",
+    "ci:version": "changeset version && npm run version",
+    "ci:publish": "npm run build && changeset publish"
+  },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
     "@robot-inventor/oxlint-config": "^0.5.0",
     "@robot-inventor/tsconfig-base": "^7.0.0",
+    "oxfmt": "^0.74.0",
     "oxlint": "^1.83.0",
-    "prettier": "^3.2.5",
     "typescript": "^7.0.0"
   }
 }

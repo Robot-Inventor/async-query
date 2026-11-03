@@ -100,9 +100,17 @@ const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["
     selectorFunction: () => ReturnType<E>,
     timeoutMs: number
 ): Promise<ReturnType<E> | null> => {
+    /**
+     * Checks whether the selector function found a matching element or a non-empty node list.
+     * @param result result returned by the selector function
+     * @returns whether a result was found
+     */
+    const hasResult = (result: ReturnType<E>): boolean =>
+        result instanceof Element || (result instanceof NodeList && Boolean(result.length));
+
     const promise = new Promise<ReturnType<E> | null>((resolve) => {
         const initialResult = selectorFunction();
-        if (initialResult instanceof Element || (initialResult instanceof NodeList && initialResult.length)) {
+        if (hasResult(initialResult)) {
             resolve(initialResult);
             return;
         }
@@ -111,7 +119,7 @@ const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["
 
         const observer = new MutationObserver(() => {
             const element = selectorFunction();
-            if (!(element instanceof Element) && !(element instanceof NodeList && element.length)) return;
+            if (!hasResult(element)) return;
 
             observer.disconnect();
             if (timeout) {

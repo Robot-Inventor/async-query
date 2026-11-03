@@ -1,5 +1,11 @@
 # async-query
 
+## 3.0.6
+
+### Patch Changes
+
+- [#270](https://github.com/Robot-Inventor/async-query/pull/270) [`7876fe6`](https://github.com/Robot-Inventor/async-query/commit/7876fe6832718eab9c75478ebf8eae1f4161a7ea) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: extract complex conditions
+
 ## 3.0.5
 
 ### Patch Changes

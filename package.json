@@ -1,6 +1,6 @@
 {
   "name": "async-query",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Asynchronous versions of querySelector() and querySelectorAll()",
   "homepage": "https://github.com/Robot-Inventor/async-query#readme",
   "bugs": {

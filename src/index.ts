@@ -95,7 +95,7 @@ interface AsyncQuerySelectorAll {
 /*!
  * The following code is provided under the MIT License.
  */
-// oxlint-disable-next-line id-length jsdoc-js/require-jsdoc
+// oxlint-disable-next-line id-length
 const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["querySelectorAll"]>(
     selectorFunction: () => ReturnType<E>,
     timeoutMs: number
@@ -112,6 +112,7 @@ const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["
         const initialResult = selectorFunction();
         if (hasResult(initialResult)) {
             resolve(initialResult);
+
             return;
         }
 
@@ -125,6 +126,7 @@ const asyncQuerySelectorBase = <E extends Document["querySelector"] | Document["
             if (timeout) {
                 clearTimeout(timeout);
             }
+
             resolve(element);
         });
 
@@ -160,6 +162,7 @@ const asyncQuerySelector: AsyncQuerySelector = async (
         () => parentElement.querySelector(selectors),
         timeoutMs
     );
+
     return result;
 };
 
